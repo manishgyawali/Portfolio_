@@ -12,7 +12,7 @@ import {
 
 const Navigation = () => {
   return (
-    <div className="fixed w-5/12 mx-auto top-0 left-0 right-0 bg-[#1f1f1f] text-white rounded-2xl z-50 shadow-md">
+    <div className="fixed shadow-2xl w-5/12 mx-auto top-0 left-0 right-0 bg-[#1f1f1f] text-white rounded-2xl z-50 ">
       <div className="flex justify-around items-center py-4">
         <Link href="/">
           <button className="text-gray-300 hover:text-white text-xl">
@@ -32,7 +32,7 @@ const Navigation = () => {
           </button>
         </Link>
 
-        <Link href="/Tools">
+        <Link href="/Skills">
           <button className="text-gray-300 hover:text-white text-xl">
             <FaTools />
           </button>
