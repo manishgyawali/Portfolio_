@@ -1,3 +1,5 @@
+import { Contact } from "@/components/Contact/Contact";
+import Submit from "@/components/Submit/Submit";
 import React from "react";
 
 import { FaTwitter, FaInstagram, FaEnvelope, FaGlobe } from "react-icons/fa";
@@ -19,6 +21,7 @@ const page = () => {
           <FaEnvelope className="text-xl hover:text-purple-500" />
         </div>
 
+        <Contact />
         <form className="flex flex-col gap-6">
           <input
             type="text"
@@ -38,12 +41,13 @@ const page = () => {
             className="p-4 rounded-lg bg-[#1f1f1f] border border-gray-600 placeholder-gray-400 focus:outline-none focus:border-purple-500"
           />
 
-          <button
+          {/* <button
             type="submit"
             className="w-full md:w-fit px-8 py-3 rounded-xl bg-purple-600 text-white font-semibold hover:bg-purple-700 transition duration-300"
           >
             Submit
-          </button>
+          </button> */}
+          <Submit />
         </form>
       </div>
     </div>

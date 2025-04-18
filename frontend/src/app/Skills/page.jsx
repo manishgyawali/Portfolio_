@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import {
   FaJsSquare,
@@ -15,69 +16,81 @@ import {
 } from "react-icons/fa";
 import { SiCanva, SiTypescript, SiMongodb } from "react-icons/si";
 
+// 🎯 Skill Sections (titles, icons & descriptions only)
 const skills = [
   {
     title: "Frontend Development",
-    icon: <FaTools className="text-4xl text-cyan-600 mx-auto mb-4" />,
+    icon: <FaTools className="text-5xl text-purple-500 mx-auto mb-4" />,
     desc: "Developing blazing fast web applications for seamless user interaction.",
-    tools: [
-      { icon: <FaJsSquare />, name: "JavaScript" },
-      { icon: <FaReact />, name: "React" },
-      { icon: <FaGitAlt />, name: "Git" },
-      { icon: <FaBootstrap />, name: "Bootstrap" },
-      { icon: <FaHtml5 />, name: "HTML" },
-      { icon: <FaCss3Alt />, name: "CSS" },
-      { icon: <FaFigma />, name: "Figma" },
-      { icon: <SiCanva />, name: "Canva" },
-    ],
   },
   {
     title: "Responsive & Backend",
-    icon: <FaDatabase className="text-4xl text-cyan-600 mx-auto mb-4" />,
+    icon: <FaDatabase className="text-5xl text-purple-500 mx-auto mb-4" />,
     desc: "Mobile-first, responsive design layout for all devices is a top priority.",
-    tools: [
-      { icon: <FaNodeJs />, name: "Node.js" },
-      { icon: <FaFire />, name: "Firebase" },
-      { icon: <SiMongodb />, name: "MongoDB" },
-    ],
   },
   {
     title: "Learning & Growth",
-    icon: <FaGraduationCap className="text-4xl text-cyan-600 mx-auto mb-4" />,
+    icon: <FaGraduationCap className="text-5xl text-purple-500 mx-auto mb-4" />,
     desc: "Constantly continues to learn new technologies and keeping up-to-date with the freshest trends.",
-    tools: [
-      // { icon: <FaRedux />, name: "Redux" },
-      { icon: <SiTypescript />, name: "TypeScript" },
-    ],
   },
 ];
 
-const page = () => {
-  return (
-    <section className="bg-black text-white py-20 px-6 pt-32 md:px-20 text-center">
-      <h2 className="text-4xl font-bold mb-12 ">SKILLS</h2>
+// 🎯 All Tools (separated from skills)
+const allTools = [
+  { icon: <FaHtml5 className="text-orange-600" />, name: "HTML" },
+  { icon: <FaCss3Alt className="text-blue-500" />, name: "CSS" },
+  { icon: <FaJsSquare className="text-yellow-500" />, name: "JavaScript" },
+  { icon: <FaReact className="text-blue-400" />, name: "React" },
+  { icon: <FaReact className="text-gray-800" />, name: "Next.js" },
 
-      <div className="grid md:grid-cols-3 gap-10">
+  { icon: <FaGitAlt className="text-orange-500" />, name: "Git" },
+  { icon: <FaBootstrap className="text-purple-600" />, name: "Bootstrap" },
+
+  { icon: <FaFigma className="text-pink-500" />, name: "Figma" },
+  { icon: <SiCanva className="text-indigo-500" />, name: "Canva" },
+  { icon: <FaNodeJs className="text-green-500" />, name: "Node.js" },
+  { icon: <FaFire className="text-red-500" />, name: "Firebase" },
+  { icon: <SiMongodb className="text-green-700" />, name: "MongoDB" },
+];
+
+const Page = () => {
+  return (
+    <div className="bg-black text-white py-20 px-6 pt-32 md:px-20 text-center">
+          <div className="w-8/12 mx-auto">
+        <h1 className="text-4xl font-bold text-center border-b-4 pb-2 mb-4">
+          SKILLS
+        </h1>
+        </div>
+      {/* Skill Descriptions */}
+      <div className="grid md:grid-cols-3 gap-10 mt-16 mb-20">
         {skills.map((skill, index) => (
           <div key={index}>
             {skill.icon}
-            <p className="text-gray-600 mb-6">{skill.desc}</p>
-            <div className="flex flex-wrap justify-center gap-6 text-5xl text-gray-700">
-              {skill.tools.map((tool, i) => (
-                <div
-                  key={i}
-                  className="w-16 h-16 flex items-center justify-center rounded-full shadow-md bg-gray-100 hover:scale-110 transition"
-                  title={tool.name}
-                >
-                  {tool.icon}
-                </div>
-              ))}
-            </div>
+            <p className="text-gray-400">{skill.desc}</p>
           </div>
         ))}
       </div>
-    </section>
+
+      {/* All Tools Displayed Together */}
+      <div className="grid grid-cols-6 w-10/12 mx-auto justify-center gap-6">
+        {allTools.map((tool, index) => (
+          <div
+            key={index}
+            className="w-24 h-24 flex items-center justify-center rounded-full shadow-md bg-gray-100 hover:scale-110 transition transform animate-bounce"
+            style={{
+              animationDuration: "3s",
+              animationDelay: `${index * 0.2}s`,
+              animationIterationCount: "infinite",
+            }}
+            title={tool.name}
+          >
+            {/* Set icon size here */}
+            <div className="text-7xl">{tool.icon}</div>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 };
 
-export default page;
+export default Page;
