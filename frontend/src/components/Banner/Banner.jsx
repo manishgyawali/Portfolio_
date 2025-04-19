@@ -1,3 +1,4 @@
+
 import React from "react";
 
 const Banner = () => {
@@ -9,7 +10,9 @@ const Banner = () => {
         <h1 className="text-3xl md:text-6xl lg:text-6xl font-bold leading-tight">
           Transforming Your <br />
           Ideas into <span className="text-purple-500">Reality</span>
-        </h1>
+        </h1>{" "}
+
+
         {/* Subheading */}
         <p className="text-gray-300 text-lg w-10/12  ">
           Passionate about creating intuitive and engaging user experiences.

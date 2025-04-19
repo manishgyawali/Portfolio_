@@ -16,7 +16,7 @@ const items = [
   {
     title: "Gies Consultancy Site",
     description: "A consultancy website created with Next.js for modern businesses.",
-    link: "/projects/consultancy",
+    link: "/Projects/Consultancy",
     image: "/Images/ss.png",
     tech: "NEXTJS",
   },
