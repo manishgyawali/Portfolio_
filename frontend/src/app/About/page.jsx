@@ -1,28 +1,30 @@
+import Testimonials from "@/components/Packages/Testimonials/Testimonials";
 import React from "react";
 
 const page = () => {
   return (
     <div className="min-h-screen text-white p-6 font-sans py-20 px-6 md:px-20 pt-32">
-      <div className="max-w-4xl mx-auto">
+      <div className="w-10/12 mx-auto">
         <h1 className="text-4xl font-bold text-center border-b-4 pb-2 mb-4">
           ABOUT <span className="text-purple-500">ME</span>
         </h1>
-        <p className="text-center text-gray-400 mb-6">
+        <p className="text-center text-gray-400 mb-6 ">
           ALLOW ME TO INTRODUCE MYSELF.
         </p>
 
-        <div className="flex  w-full items-center mb-10">
+        <div className="flex  md:flex gap-5 md:gap-10 w-full mt-14 md:mt-20 items-center justify-center mb-10">
+          {/* image */}
           <div className="relative w-6/12 mb-6 md:mb-0 md:mr-8">
             <div className="bg-white p-2 shadow-lg transform -rotate-6 w-fit">
               <img
                 src="/Images/profile.jpg"
                 alt="That's me"
-                className="w-60 h-48 object-cover"
+                className=" w-72 h-48  md:w-60 md:h-48 object-cover"
               />
             </div>
           </div>
-
-          <div className="text-gray-400 w-10/12 space-y-4">
+          {/* description */}
+          <div className="text-gray-400 w-10/12 gap-4">
             <p>
               I'm obsessed with making things and even more obsessed with making
               things better. I've been in the business of creating since I hung
@@ -55,8 +57,9 @@ const page = () => {
             </p>
           </div>
         </div>
-
-        
+        <div className="mt-20">
+          <Testimonials />
+        </div>
       </div>
     </div>
   );

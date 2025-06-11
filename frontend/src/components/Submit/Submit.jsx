@@ -42,7 +42,7 @@ const SpringModal = ({ isOpen, setIsOpen }) => {
                 <FiAlertCircle />
               </div>
               <h3 className="text-3xl font-bold text-center mb-2">
-                One more thing!
+              Do you want to continue?
               </h3>
               <p className="text-center mb-6">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
@@ -59,7 +59,7 @@ const SpringModal = ({ isOpen, setIsOpen }) => {
                   onClick={() => setIsOpen(false)}
                   className="bg-white hover:opacity-90 transition-opacity text-indigo-600 font-semibold w-full py-2 rounded"
                 >
-                  Understood!
+                  Yes
                 </button>
               </div>
             </div>

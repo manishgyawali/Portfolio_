@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 
 export const Contact = () => {
   return (
-    <div className="flex items-center justify-center  px-8 py-16 text-white">
+    <div className="flex items-center justify-center  px-6 md:px-20 py-16 text-white">
       <BlockInTextCard
-        tag="/ Support"
+        tag="Contact / Support"
         text={
           <>
             <strong className="text-purple-500">Have questions?</strong> I'd love to help! Contact support
@@ -37,7 +37,7 @@ const BlockInTextCard = ({ tag, text, examples }) => {
         <Typewrite examples={examples} />
         <hr className="border-neutral-300" />
       </div>
-      <button className="w-full rounded-full border border-white py-2 text-sm font-medium transition-colors hover:bg-gray-300 hover:text-black">
+      <button className="w-10/12 mx-auto rounded-full border border-white py-2 text-sm font-medium transition-colors hover:bg-gray-300 hover:text-black">
         Contact Support
       </button>
     </div>

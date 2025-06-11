@@ -5,7 +5,7 @@ import React from "react";
 import { FaTwitter, FaInstagram, FaEnvelope, FaGlobe } from "react-icons/fa";
 const page = () => {
   return (
-    <div className=" text-white py-20 px-6 md:px-20 w-8/12 mx-auto pt-32">
+    <div className=" text-white py-20 px-6 md:px-20 w-10/12 mx-auto pt-32">
       <div className="flex flex-col gap-6 mx-auto text-center">
         <h2 className="text-4xl font-bold  text-white">Get In Touch</h2>
         <p className="text-gray-400 ">
@@ -22,7 +22,7 @@ const page = () => {
         </div>
 
         <Contact />
-        <form className="flex flex-col gap-6">
+        <form className="flex flex-col w-10/12 lg:w-8/12 mx-auto gap-6">
           <input
             type="text"
             placeholder="Name"
@@ -47,8 +47,8 @@ const page = () => {
           >
             Submit
           </button> */}
-          <Submit />
         </form>
+          <Submit className="text-left"/>
       </div>
     </div>
   );

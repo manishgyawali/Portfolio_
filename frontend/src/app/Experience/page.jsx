@@ -78,14 +78,14 @@ const timelineData = [
 const page = () => {
   return (
     <div className="text-white py-20 px-6 md:px-20 pt-32 ">
-      <div className="w-8/12 mx-auto"> <h1 className="text-4xl font-bold text-center border-b-4 pb-2 mb-4">
+      <div className="w-10/12 mx-auto"> <h1 className="text-4xl font-bold text-center border-b-4 pb-2 mb-4">
         EXPERIENCE
       </h1>
       <p className="text-center text-gray-400 mb-6">
         Here's a glimpse of the projects I've built — blending creativity, code,
         and problem-solving.
       </p></div>
-     <div className="w-10/12 mx-auto">
+     <div className="">
      <Timeline data={timelineData} />{" "}
      </div>
     </div>

@@ -55,12 +55,12 @@ const allTools = [
 
 const Page = () => {
   return (
-    <div className="bg-black text-white py-20 px-6 pt-32 md:px-20 text-center">
-          <div className="w-8/12 mx-auto">
+    <div className="bg-black w-10/12 mx-auto text-white py-20 px-6 pt-32 md:px-20 text-center">
+      <div className=" ">
         <h1 className="text-4xl font-bold text-center border-b-4 pb-2 mb-4">
           SKILLS
         </h1>
-        </div>
+      </div>
       {/* Skill Descriptions */}
       <div className="grid md:grid-cols-3 gap-10 mt-16 mb-20">
         {skills.map((skill, index) => (
@@ -72,7 +72,7 @@ const Page = () => {
       </div>
 
       {/* All Tools Displayed Together */}
-      <div className="grid grid-cols-6 w-10/12 mx-auto justify-center gap-6">
+      <div className="grid grid-cols-4  lg:grid-cols-6  justify-center gap-6">
         {allTools.map((tool, index) => (
           <div
             key={index}

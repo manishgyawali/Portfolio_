@@ -60,7 +60,7 @@ const Page = () => {
 
   return (
     <div className="text-white py-20 px-6 md:px-20 pt-32">
-      <div className="w-8/12 mx-auto">
+      <div className="w-10/12 mx-auto">
         <h1 className="text-4xl font-bold text-center border-b-4 pb-2 mb-4">
           PROJECTS
         </h1>
